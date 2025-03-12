@@ -1,16 +1,15 @@
-<h1 align="center" >🧛‍♂️ dracula.nvim</h1>
+<h1 align="center" >🧛‍♂️ punkula.nvim</h1>
 
-<p align="center"><a href="https://draculatheme.com/">Dracula</a> colorscheme for <a href="https://neovim.io/">NEOVIM</a> written in Lua</p>
+<p align="center"><a href="https://punkulatheme.com/">Punkula</a> colorscheme for <a href="https://neovim.io/">NEOVIM</a> written in Lua</p>
 
-![dracula.nvim](./assets/showcase.png)
-
+![punkula.nvim](./assets/showcase.png)
 
 ## ✔️ Requirements
 
 - Neovim >= 0.9.2
 - Treesitter (optional)
 
-NOTICE: if you use an older version of neovim (>=0.8.0 <0.9.2), you can pin this plugin to [commit 8fc749](https://github.com/Mofiqul/dracula.nvim/commit/8fc749e2479d62829c9c627867770035b74529a4)
+NOTICE: if you use an older version of neovim (>=0.8.0 <0.9.2), you can pin this plugin to [commit 8fc749](https://github.com/Mofiqul/punkula.nvim/commit/8fc749e2479d62829c9c627867770035b74529a4)
 
 ## #️ Supported Plugins
 
@@ -39,55 +38,56 @@ Install via package manager
 
 ```lua
 -- Using Packer:
-use 'Mofiqul/dracula.nvim'
+use 'Mofiqul/punkula.nvim'
 ```
 
 ```vim
 " Using Vim-Plug:
-Plug 'Mofiqul/dracula.nvim'
+Plug 'Mofiqul/punkula.nvim'
 ```
 
 ## 🚀 Usage
 
 ```lua
 -- Lua:
-vim.cmd[[colorscheme dracula]]
+vim.cmd[[colorscheme punkula]]
 -- or
-vim.cmd[[colorscheme dracula-soft]]
+vim.cmd[[colorscheme punkula-soft]]
 ```
 
 ```vim
 " Vim-Script:
-colorscheme dracula
+colorscheme punkula
 " or:
-colorscheme dracula-soft
+colorscheme punkula-soft
 ```
 
 If you are using [`lualine`](https://github.com/hoob3rt/lualine.nvim), you can also enable the provided theme:
 
-> Make sure to set theme as 'dracula-nvim' as dracula already exists in lualine built in themes
+> Make sure to set theme as 'punkula-nvim' as punkula already exists in lualine built in themes
 
 ```lua
 require('lualine').setup {
   options = {
     -- ...
-    theme = 'dracula-nvim'
+    theme = 'punkula-nvim'
     -- ...
   }
 }
 ```
 
 If you are using [LazyVim](https://github.com/LazyVim/LazyVim), you can add this to your plugins/colorscheme.lua file:
+
 ```lua
 return {
-  -- add dracula
-  { "Mofiqul/dracula.nvim" },
+  -- add punkula
+  { "Mofiqul/punkula.nvim" },
 
-  -- Configure LazyVim to load dracula
+  -- Configure LazyVim to load punkula
   {
     "LazyVim/LazyVim",
     opts = {
-      colorscheme = "dracula",
+      colorscheme = "punkula",
     },
   },
 }
@@ -96,14 +96,14 @@ return {
 ## 🔧 Configuration
 
 The configuration must be run before `colorscheme` command to take effect.
-To customize the 'dracula-soft' variant, include `theme = 'dracula-soft'` in the `setup()` table below.
+To customize the 'punkula-soft' variant, include `theme = 'punkula-soft'` in the `setup()` table below.
 
 If you're using Lua:
 
 ```lua
-local dracula = require("dracula")
-dracula.setup({
-  -- customize dracula color palette
+local punkula = require("punkula")
+punkula.setup({
+  -- customize punkula color palette
   colors = {
     bg = "#282A36",
     fg = "#F8F8F2",
@@ -158,9 +158,9 @@ dracula.setup({
 ## 🎨 Importing colors for other usage
 
 ```lua
-local colors = require('dracula').colors()
+local colors = require('punkula').colors()
 ```
 
-This will return the following table (`dracula` palette shown):
+This will return the following table (`punkula` palette shown):
 
 ![colors](./assets/colors.png)
